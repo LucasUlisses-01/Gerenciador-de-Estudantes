@@ -21,7 +21,7 @@ function cadastrarEstudante(nome, idade, notas) {
     // Cria um objeto estudante
     let novoEstudante = { nome, idade, notas };
 
-    // Adiciona no array principal
+    // Adiciona no array principal-
     estudantes.push(novoEstudante);
 
     console.log(`Estudante ${nome} cadastrado com sucesso!`);
