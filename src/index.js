@@ -8,6 +8,16 @@ const {
 } = require("./estudantes");
 const estudantes = require("./data");
 
+const estudantes = require("./data");
+const { calcularMedia, situacaoDoAluno } = require("./estudantes");
+
+estudantes.forEach(estudante => {
+  const media = calcularMedia(estudante.notas);
+  console.log(
+    `${estudante.nome} - Média: ${media.toFixed(2)} - Situação: ${situacaoDoAluno(estudante)}`
+  );
+});
+
 let opcao;
 do {
   console.log("\n=== Sistema de Estudantes ===");

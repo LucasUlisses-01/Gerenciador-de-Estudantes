@@ -45,6 +45,26 @@ function removerEstudante(id) {
   console.log(`Estudante ${removido[0].nome} removido com sucesso!`);
 }
 
+// calcular media do estudante
+function calcularMedia(notas) {
+  const soma = notas.reduce((acc, nota) => acc + nota, 0);
+  return soma / notas.length;
+}
+
+// Situação do estudante
+function situacaoDoAluno(estudante) {
+  const media = calcularMedia(estudante.notas);
+
+  if (media >= 7) {
+    return "Aprovado";
+  } else if (media >= 5) {
+    return "Recuperação";
+  } else {
+    return "Reprovado";
+  }
+}
+
+module.exports = { calcularMedia, situacaoDoAluno };
 module.exports = {
   listarEstudantes,
   buscarEstudantePorId,
