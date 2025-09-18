@@ -45,7 +45,7 @@ function removerEstudante(id) {
   console.log(`Estudante ${removido[0].nome} removido com sucesso!`);
 }
 
-// calcular media do estudante
+// Calcular média do estudante
 function calcularMedia(notas) {
   const soma = notas.reduce((acc, nota) => acc + nota, 0);
   return soma / notas.length;
@@ -64,11 +64,13 @@ function situacaoDoAluno(estudante) {
   }
 }
 
-module.exports = { calcularMedia, situacaoDoAluno };
+// Exportando todas as funções de uma vez
 module.exports = {
   listarEstudantes,
   buscarEstudantePorId,
   adicionarEstudante,
   atualizarEstudante,
   removerEstudante,
+  calcularMedia,
+  situacaoDoAluno
 };
